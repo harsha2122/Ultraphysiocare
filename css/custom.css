@@ -1370,6 +1370,18 @@ header.main-header .header-sticky.active {
   max-width: 30px;
 }
 
+.service-item .icon-box i {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  color: var(--accent-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.service-item:hover .icon-box i {
+  color: var(--primary-color);
+}
+
 .service-item .service-body {
   margin-bottom: 20px;
 }

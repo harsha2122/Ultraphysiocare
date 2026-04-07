@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Book a free physiotherapy consultation at Ultraphysiocare, Noida. Expert treatment for neck pain, back pain, knee pain, sports injuries, and more. Call +91 92114 01779."/>
+  <meta name="keywords" content="physiotherapy Noida, best physiotherapy center Noida, pain relief, book physiotherapy appointment"/>
+  <title>Ultraphysiocare – Book Your Free Physiotherapy Consultation | Noida</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet"/>
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+  <link href="css/slicknav.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+  <link href="css/all.css" rel="stylesheet" media="screen"/>
+  <link href="css/animate.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/magnific-popup.css"/>
+  <link rel="stylesheet" href="css/mousecursor.css"/>
+  <link href="css/custom.css" rel="stylesheet" media="screen"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    /* Landing page form styles */
+    .lp-hero { background: linear-gradient(135deg, var(--primary-color) 0%, #0c4a62 100%); padding: 80px 0; min-height: 100vh; display: flex; align-items: center; }
+    .lp-hero-content h1 { color: #fff; font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+    .lp-hero-content h1 span { color: var(--accent-color); }
+    .lp-hero-content p { color: rgba(255,255,255,0.85); font-size: 16px; line-height: 1.8; margin-bottom: 30px; }
+    .lp-hero-content .feature-list { list-style: none; padding: 0; margin-bottom: 30px; }
+    .lp-hero-content .feature-list li { color: rgba(255,255,255,0.9); padding: 6px 0; font-size: 15px; }
+    .lp-hero-content .feature-list li i { color: var(--accent-color); margin-right: 10px; }
+    .lp-form-box { background: #fff; border-radius: 20px; padding: 40px 35px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    .lp-form-box h2 { font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 6px; }
+    .lp-form-box .form-subtitle { font-size: 13px; color: #777; margin-bottom: 25px; }
+    .lp-form-box .free-badge { display: inline-block; background: var(--accent-color); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-left: 8px; vertical-align: middle; }
+    .lp-form-box .form-group { margin-bottom: 16px; }
+    .lp-form-box .form-control { height: 48px; border: 1.5px solid #e0e0e0; border-radius: 10px; font-size: 14px; padding: 10px 16px; color: var(--primary-color); transition: border-color 0.3s; }
+    .lp-form-box .form-control:focus { border-color: var(--accent-color); box-shadow: 0 0 0 3px rgba(12,150,196,0.1); outline: none; }
+    .lp-form-box textarea.form-control { height: 90px; resize: none; }
+    .lp-form-box select.form-control { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23152d3c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
+    .lp-submit-btn { width: 100%; height: 52px; background: var(--accent-color); color: #fff; border: none; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.3s; letter-spacing: 0.5px; }
+    .lp-submit-btn:hover { background: var(--primary-color); }
+    .lp-whatsapp-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 52px; background: #25D366; color: #fff; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; margin-top: 12px; transition: background 0.3s; }
+    .lp-whatsapp-btn:hover { background: #1ebe5d; color: #fff; text-decoration: none; }
+    .lp-whatsapp-btn i { font-size: 20px; }
+    .lp-divider { display: flex; align-items: center; gap: 12px; margin: 14px 0; }
+    .lp-divider span { font-size: 12px; color: #aaa; white-space: nowrap; }
+    .lp-divider::before, .lp-divider::after { content: ''; flex: 1; height: 1px; background: #e5e5e5; }
+    /* Features strip */
+    .lp-features { background: var(--secondary-color); padding: 50px 0; }
+    .lp-feature-item { text-align: center; padding: 20px; }
+    .lp-feature-item .icon-wrap { width: 64px; height: 64px; background: var(--accent-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .lp-feature-item .icon-wrap i { font-size: 26px; color: #fff; }
+    .lp-feature-item h3 { font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 8px; }
+    .lp-feature-item p { font-size: 13px; color: #666; margin: 0; line-height: 1.6; }
+    /* About */
+    .lp-about { padding: 80px 0; }
+    .lp-about img { border-radius: 20px; width: 100%; height: 420px; object-fit: cover; }
+    /* Services */
+    .lp-services { background: var(--secondary-color); padding: 80px 0; }
+    .lp-service-card { background: #fff; border-radius: 15px; padding: 28px 24px; margin-bottom: 24px; border: 1.5px solid transparent; transition: all 0.3s; }
+    .lp-service-card:hover { border-color: var(--accent-color); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    .lp-service-card i { font-size: 28px; color: var(--accent-color); margin-bottom: 12px; display: block; }
+    .lp-service-card h3 { font-size: 15px; font-weight: 700; color: var(--primary-color); margin: 0; }
+    /* CTA */
+    .lp-cta { background: var(--primary-color); padding: 70px 0; text-align: center; }
+    .lp-cta h2 { color: #fff; font-size: 34px; font-weight: 800; margin-bottom: 12px; }
+    .lp-cta p { color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 30px; }
+    .lp-cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .lp-cta .wa-btn { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff; padding: 14px 32px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: background 0.3s; }
+    .lp-cta .wa-btn:hover { background: #1ebe5d; color: #fff; }
+    @media (max-width: 768px) { .lp-hero { padding: 60px 0; min-height: auto; } .lp-hero-content h1 { font-size: 28px; } .lp-form-box { padding: 28px 20px; margin-top: 40px; } }
+  </style>
+</head>
+<body>
+
+<div class="quick_contact">
+  <a href="https://api.whatsapp.com/send?phone=919211401779" class="qwhtsapp" target="_blank"><i class="fa fa-whatsapp quick_contact_icon"></i></a>
+  <a href="tel:+919211401779" class="qcall"><i class="fa fa-phone quick_contact_icon"></i></a>
+</div>
+
+<div class="preloader"><div class="loading-container"><div class="loading"></div><div id="loading-icon"><img src="images/loader.svg" alt=""/></div></div></div>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-9 col-md-12">
+        <div class="topbar-contact-info"><ul>
+          <li><a href="tel:+919211401779"><img src="images/icon-phone.svg" alt=""/>92114 01779</a></li>
+          <li><a href="mailto:ultraphysiocare@gmail.com"><img src="images/icon-mail.svg" alt=""/>ultraphysiocare@gmail.com</a></li>
+          <li class="hide-mobile"><a href="#"><img src="images/icon-location.svg" alt=""/>Noida, Uttar Pradesh</a></li>
+        </ul></div>
+      </div>
+      <div class="col-lg-3 col-md-0">
+        <div class="topbar-social-links"><ul>
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="header" class="main-header">
+  <div class="header-sticky">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img width="50" src="images/logo.png" alt="Logo"/><h3>Ultraphysiocare</h3></a>
+        <div class="collapse navbar-collapse main-menu">
+          <div class="nav-menu-wrapper">
+            <ul class="navbar-nav mr-auto" id="menu">
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="header-btn d-inline-flex"><a href="tel:+919211401779" class="btn-default">92114 01779</a></div>
+        </div>
+        <div class="navbar-toggle"></div>
+      </div>
+    </nav>
+    <div class="responsive-menu"></div>
+  </div>
+</header>
+
+<!-- ======================== HERO SECTION ======================== -->
+<div class="lp-hero">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left: Headline + Trust Signals -->
+      <div class="col-lg-6 lp-hero-content wow fadeInLeft">
+        <h1><span>Best Physiotherapy Center</span><br/>in Noida for Pain Relief &amp; Recovery</h1>
+        <p>Ultra Physio Care is a trusted physiotherapy clinic in Noida offering advanced treatments for pain relief, sports injuries, arthritis, and post-surgery recovery. Experienced physiotherapists, personalised care, and FREE first consultation.</p>
+        <ul class="feature-list">
+          <li><i class="fa fa-check-circle"></i>Free First Physiotherapy Consultation</li>
+          <li><i class="fa fa-check-circle"></i>Home Visit Service Available</li>
+          <li><i class="fa fa-check-circle"></i>Female Physiotherapist Available</li>
+          <li><i class="fa fa-check-circle"></i>24 x 7 Open — Same Day Appointments</li>
+          <li><i class="fa fa-check-circle"></i>Expert Doctors: Dr. Rahul Kumar &amp; Dr. Gaurav Bhadauriya</li>
+        </ul>
+      </div>
+
+      <!-- Right: Appointment Form -->
+      <div class="col-lg-6 wow fadeInRight">
+        <div class="lp-form-box">
+          <h2>Book Your Appointment <span class="free-badge">FREE</span></h2>
+          <p class="form-subtitle">Fill the form below and we will call you back within 30 minutes.</p>
+
+          <form id="lp-appointment-form" action="contact.html" method="get">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Full Name *" name="name" required/>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" placeholder="Mobile Number *" name="phone" required pattern="[0-9]{10}" maxlength="10"/>
+            </div>
+            <div class="form-group">
+              <select class="form-control" name="service" required>
+                <option value="" disabled selected>Select Your Problem / Service *</option>
+                <optgroup label="Pain Conditions">
+                  <option>Neck Pain</option>
+                  <option>Back Pain</option>
+                  <option>Knee Pain</option>
+                  <option>Shoulder Pain</option>
+                  <option>Frozen Shoulder</option>
+                  <option>Sciatica</option>
+                  <option>Spondylitis</option>
+                  <option>Tennis Elbow</option>
+                  <option>Osteoarthritis</option>
+                  <option>Golfer's Elbow</option>
+                  <option>Stroke</option>
+                  <option>Parkinsonism</option>
+                </optgroup>
+                <optgroup label="Injuries & Rehabilitation">
+                  <option>Post Operative Rehabilitation</option>
+                  <option>Spinal Cord Injury</option>
+                  <option>Prenatal &amp; Post-Natal Physio</option>
+                  <option>Ligament Injury</option>
+                  <option>Sprain and Strain</option>
+                  <option>Sports Related Injury</option>
+                  <option>Balance Impairments</option>
+                  <option>Neuro Rehabilitation</option>
+                </optgroup>
+                <optgroup label="Specialised Therapies">
+                  <option>Hijama Therapy</option>
+                  <option>Dry Needling</option>
+                  <option>Sports Taping</option>
+                  <option>IASTM</option>
+                </optgroup>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Briefly describe your concern (optional)" name="message"></textarea>
+            </div>
+            <button type="submit" class="lp-submit-btn">
+              <i class="fa fa-calendar" style="margin-right:8px;"></i> Book Free Appointment
+            </button>
+          </form>
+
+          <div class="lp-divider"><span>or contact us directly on</span></div>
+
+          <a href="https://api.whatsapp.com/send?phone=919211401779&text=Hi%2C%20I%20would%20like%20to%20book%20a%20physiotherapy%20appointment%20at%20Ultraphysiocare." target="_blank" class="lp-whatsapp-btn">
+            <i class="fa fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- ======================== HERO END ======================== -->
+
+<!-- Features Strip -->
+<div class="lp-features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="lp-feature-item wow fadeInUp">
+          <div class="icon-wrap"><i class="fa fa-user-md"></i></div>
+          <h3>Expert Physiotherapists</h3>
+          <p>Certified doctors with experience at AIIMS, Yashoda &amp; VIMHANS hospitals.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="lp-feature-item wow fadeInUp" data-wow-delay="0.2s">
+          <div class="icon-wrap"><i class="fa fa-home"></i></div>
+          <h3>Home Visit Available</h3>
+          <p>Can't travel? Our physiotherapists come to your home for treatment.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="lp-feature-item wow fadeInUp" data-wow-delay="0.4s">
+          <div class="icon-wrap"><i class="fa fa-female"></i></div>
+          <h3>Female Physio Available</h3>
+          <p>We have dedicated female physiotherapists for women patients.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="lp-feature-item wow fadeInUp" data-wow-delay="0.6s">
+          <div class="icon-wrap"><i class="fa fa-clock-o"></i></div>
+          <h3>24 x 7 Open</h3>
+          <p>Emergency and same-day physiotherapy appointments available round the clock.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<div class="lp-about">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 wow fadeInLeft">
+        <img src="images/about-img.jpg" alt="Ultraphysiocare Physiotherapy Clinic Noida"/>
+      </div>
+      <div class="col-lg-6 wow fadeInRight">
+        <div class="section-title" style="padding-left:40px;">
+          <h3>about us</h3>
+          <h2 class="text-anime-style-2" data-cursor="-opaque">Leading <span>Physiotherapy Center</span> in Noida</h2>
+          <p>Ultraphysiocare is a premier physiotherapy clinic located in Sector 108, Noida. Our experienced team of physiotherapists provides personalised, evidence-based treatment for pain relief, injury recovery, and rehabilitation.</p>
+          <p>We offer free first consultations and are open 24×7 to ensure you get the care you need, when you need it. With advanced equipment and compassionate care, we help hundreds of patients return to pain-free living every month.</p>
+          <div class="row" style="margin-top:30px;">
+            <div class="col-6">
+              <div style="text-align:center; padding:20px; background:var(--secondary-color); border-radius:15px;">
+                <h2 style="font-size:36px; font-weight:800; color:var(--accent-color); margin:0;">10+</h2>
+                <p style="font-size:13px; color:var(--primary-color); margin:0; font-weight:600;">Years of Experience</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div style="text-align:center; padding:20px; background:var(--secondary-color); border-radius:15px;">
+                <h2 style="font-size:36px; font-weight:800; color:var(--accent-color); margin:0;">500+</h2>
+                <p style="font-size:13px; color:var(--primary-color); margin:0; font-weight:600;">Patients Treated</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:30px;">
+            <a href="about.html" class="btn-default">Learn More About Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services Section -->
+<div class="lp-services">
+  <div class="container">
+    <div class="row section-row">
+      <div class="col-12 text-center">
+        <div class="section-title">
+          <h3 class="wow fadeInUp">what we treat</h3>
+          <h2 class="text-anime-style-2" data-cursor="-opaque">Our <span>Physiotherapy</span> Services</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp"><i class="fa fa-user"></i><h3>Neck Pain</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.1s"><i class="fa fa-male"></i><h3>Back Pain</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-wheelchair"></i><h3>Knee Pain</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-hand-o-up"></i><h3>Shoulder Pain</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp"><i class="fa fa-snowflake-o"></i><h3>Frozen Shoulder</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.1s"><i class="fa fa-bolt"></i><h3>Sciatica</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-futbol-o"></i><h3>Sports Injury</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-heartbeat"></i><h3>Neuro Rehabilitation</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp"><i class="fa fa-hospital-o"></i><h3>Post-Op Rehab</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.1s"><i class="fa fa-female"></i><h3>Prenatal Physio</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-tint"></i><h3>Hijama Therapy</h3></div></div>
+      <div class="col-lg-3 col-md-4 col-6"><div class="lp-service-card wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-stethoscope"></i><h3>IASTM & Dry Needling</h3></div></div>
+    </div>
+    <div class="text-center" style="margin-top:20px;">
+      <a href="services.html" class="btn-default">View All 24 Services</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA Section -->
+<div class="lp-cta">
+  <div class="container">
+    <h2>Ready to Live Pain-Free?</h2>
+    <p>Book your FREE physiotherapy consultation at Ultraphysiocare, Noida today.<br/>Our expert team is available 24×7 — at the clinic or at your home.</p>
+    <div class="lp-cta-buttons">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;" class="btn-default" style="padding:14px 32px; font-size:16px;">Book Free Appointment</a>
+      <a href="https://api.whatsapp.com/send?phone=919211401779&text=Hi%2C%20I%20would%20like%20to%20book%20a%20physiotherapy%20appointment." target="_blank" class="wa-btn">
+        <i class="fa fa-whatsapp" style="font-size:20px;"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="about-footer">
+          <div class="footer-logo"><img width="120" src="images/logo.png" alt="Ultra Physio Care Logo"/></div>
+          <div class="about-footer-content"><p>Ultra Physio Care provides advanced physiotherapy solutions for pain relief, injury recovery, and rehabilitation. Trusted by hundreds of patients in Noida.</p></div>
+          <div class="footer-social-links"><ul>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="about-working-hour"><h3>working hours</h3><ul><li>24 x 7 Open</li></ul></div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="about-service-list"><h3>our services</h3><ul>
+          <li><a href="neck-pain.html">Neck Pain</a></li>
+          <li><a href="back-pain.html">Back Pain</a></li>
+          <li><a href="knee-pain.html">Knee Pain</a></li>
+          <li><a href="shoulder-pain.html">Shoulder Pain</a></li>
+          <li><a href="sciatica.html">Sciatica</a></li>
+          <li><a href="services.html">All Services →</a></li>
+        </ul></div>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <div class="footer-contact"><h3>contact us</h3>
+          <div class="footer-contact-details">
+            <div class="footer-info-box"><div class="icon-box"><img src="images/icon-phone.svg" alt="Phone"/></div><div class="footer-info-box-content"><p>+91 92114 01779</p></div></div>
+            <div class="footer-info-box"><div class="icon-box"><img src="images/icon-mail.svg" alt="Email"/></div><div class="footer-info-box-content"><p>ultraphysiocare@gmail.com</p></div></div>
+            <div class="footer-info-box"><div class="icon-box"><img src="images/icon-location.svg" alt="Location"/></div><div class="footer-info-box-content"><p>Gate 12, D 29, Parx Laureate, Sector 108, Noida, UP 201304</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-6"><div class="footer-copyright-text"><p>&copy; 2025 Ultra Physio Care. All Rights Reserved.</p></div></div>
+        <div class="col-lg-6 col-md-6"><div class="footer-links"><ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul></div></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validator.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/SmoothScroll.js"></script>
+<script src="js/parallaxie.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/magiccursor.js"></script>
+<script src="js/SplitText.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/function.js"></script>
+</body>
+</html>

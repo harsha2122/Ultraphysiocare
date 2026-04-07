@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17699679243"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17699679243');
+  </script>
+  <!-- Conversion tracking -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17699679243/efwnCKjwoZccEIvY7vdB',
+        'value': 100.0,
+        'currency': 'INR',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -420,6 +443,7 @@ $(document).ready(function () {
                 .text('✓ Your appointment request has been sent! We will call you back shortly.')
                 .show();
           $form[0].reset();
+          gtag_report_conversion();
         } else {
           $alert.css({ background: '#fdecea', color: '#c0392b', border: '1px solid #f5c6cb' })
                 .text('✗ ' + res)

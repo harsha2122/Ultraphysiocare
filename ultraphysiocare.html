@@ -411,19 +411,18 @@ $(document).ready(function () {
     $alert.hide();
 
     $.ajax({
-      url:      'send-mail.php',
-      type:     'POST',
-      data:     $form.serialize(),
-      dataType: 'json',
+      url:  'send-mail.php',
+      type: 'POST',
+      data: $form.serialize(),
       success: function (res) {
-        if (res.success) {
+        if (res.trim() === 'success') {
           $alert.css({ background: '#d4edda', color: '#155724', border: '1px solid #c3e6cb' })
-                .text('✓ ' + res.message)
+                .text('✓ Your appointment request has been sent! We will call you back shortly.')
                 .show();
           $form[0].reset();
         } else {
           $alert.css({ background: '#fdecea', color: '#c0392b', border: '1px solid #f5c6cb' })
-                .text('✗ ' + res.message)
+                .text('✗ ' + res)
                 .show();
         }
       },

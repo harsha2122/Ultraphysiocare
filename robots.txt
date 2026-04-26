@@ -1,4 +1,24 @@
+# Ultraphysiocare - Physiotherapy Clinic Robots Configuration
+# Allow all bots to crawl and index
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
 
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://ultraphysiocare.com/sitemap.xml
+
+# Google specific - higher priority
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

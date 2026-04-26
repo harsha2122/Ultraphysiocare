@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://ultraphysiocare.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://ultraphysiocare.com/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/services.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ultraphysiocare.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ultraphysiocare.com/</loc><lastmod>2026-04-26</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ultraphysiocare.com/about.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/services.html</loc><lastmod>2026-04-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ultraphysiocare.com/contact.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/faq.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Pain Conditions -->
-  <url><loc>https://ultraphysiocare.com/neck-pain.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/back-pain.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/knee-pain.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/shoulder-pain.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/frozen-shoulder.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/sciatica.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/osteoarthritis.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/spondylitis.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/neck-pain.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/back-pain.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/knee-pain.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/shoulder-pain.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/frozen-shoulder.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/sciatica.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/osteoarthritis.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/spondylitis.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Injuries & Rehabilitation -->
-  <url><loc>https://ultraphysiocare.com/tennis-elbow.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/golfers-elbow.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/stroke.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/parkinsonism.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/post-operative-rehab.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/spinal-cord-injury.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/prenatal-postnatal-physio.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/ligament-injury.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/sprain-strain.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/tennis-elbow.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/golfers-elbow.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/stroke.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/parkinsonism.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/post-operative-rehab.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/spinal-cord-injury.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/prenatal-postnatal-physio.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/ligament-injury.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/sprain-strain.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Specialised Therapies -->
-  <url><loc>https://ultraphysiocare.com/sports-injury.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/balance-impairments.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/neuro-rehabilitation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/hijama-therapy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/dry-needling.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/sports-taping.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ultraphysiocare.com/iastm.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/sports-injury.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/balance-impairments.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/neuro-rehabilitation.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/hijama-therapy.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/dry-needling.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/sports-taping.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ultraphysiocare.com/iastm.html</loc><lastmod>2026-04-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>

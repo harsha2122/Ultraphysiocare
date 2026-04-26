@@ -93,7 +93,70 @@
       ]
     }
     </script>
-  </head>
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ultraphysiocare",
+      "url": "https://ultraphysiocare.com",
+      "logo": "https://ultraphysiocare.com/images/logo.png",
+      "description": "Leading physiotherapy clinic in Noida offering expert rehabilitation and pain management services.",
+      "telephone": "+919211401779",
+      "email": "ultraphysiocare@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gate 12, D 29, Parx Laureate, Sector 108",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201304",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Ultraphysiocare",
+        "https://www.instagram.com/Ultraphysiocare",
+        "https://www.youtube.com/@Ultraphysiocare"
+      ]
+    }
+    </script>
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ultraphysiocare",
+      "image": "https://ultraphysiocare.com/images/hero-img.png",
+      "description": "Professional physiotherapy clinic in Noida providing comprehensive rehabilitation services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gate 12, D 29, Parx Laureate, Sector 108",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201304",
+        "addressCountry": "IN"
+      },
+      "telephone": "+919211401779",
+      "url": "https://ultraphysiocare.com",
+      "priceRange": "₹₹",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "24:00"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.5355",
+        "longitude": "77.3910"
+      },
+      "areaServed": "Noida, Uttar Pradesh, India"
+    }
+    </script>
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com" />
+    </head>
   <body>
     <!-- Preloader Start -->
 
@@ -1553,22 +1616,22 @@
     <!-- SlickNav js file -->
     <script src="js/jquery.slicknav.js"></script>
     <!-- Swiper js file -->
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
     <!-- Counter js file -->
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <!-- Magnific js file -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
     <!-- SmoothScroll -->
     <script src="js/SmoothScroll.js"></script>
     <!-- Parallax js -->
     <script src="js/parallaxie.js"></script>
     <!-- MagicCursor js file -->
-    <script src="js/gsap.min.js"></script>
+    <script src="js/gsap.min.js" defer></script>
     <script src="js/magiccursor.js"></script>
     <!-- Text Effect js file -->
     <script src="js/SplitText.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
     <!-- YTPlayer js File -->
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <!-- Wow js file -->

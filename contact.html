@@ -245,8 +245,7 @@
               <!-- Contact Info Content Start -->
               <div class="contact-info-content">
                 <h3>phone</h3>
-                <p>(+01) 789 854 856</p>
-                <p>(+02) 895 867 781</p>
+                <p>+91 92114 01779</p>
               </div>
               <!-- Contact Info Content End -->
             </div>
@@ -297,36 +296,39 @@
                         </div>
                         <!-- Section Title End -->
 
-                        <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.25s" novalidate="true" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
+                        <form id="contactForm" action="send-mail.php" method="POST" class="wow fadeInUp" data-wow-delay="0.25s" novalidate style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
                             <div class="row">
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Enter Name" required="">
+                                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Enter Name" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
-                    
+
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email" required="">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
-                    
+
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone Number" required="">
+                                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone Number" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
-                    
+
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required="">
+                                    <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
-                    
-                                <div class="form-group col-md-12 mb-5">
-                                    <textarea name="msg" class="form-control" id="msg" rows="5" placeholder="Your Message" required=""></textarea>
+
+                                <div class="form-group col-md-12 mb-4">
+                                    <textarea name="msg" class="form-control" id="msg" rows="5" placeholder="Your Message" required></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
-                    
+
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn-default disabled">send message</button>
-                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                    <button type="submit" id="submitBtn" class="btn-default">send message</button>
+                                </div>
+
+                                <div class="col-md-12 mt-3">
+                                    <div id="formAlert" style="display:none; padding:15px 20px; border-radius:8px; font-weight:600; font-size:15px;"></div>
                                 </div>
                             </div>
                         </form>
@@ -503,5 +505,62 @@
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
     <script src="https://demo.awaikenthemes.com/assets/js/theme-panel.js"></script>
+
+    <!-- Contact Form AJAX Handler -->
+    <script>
+    $(document).ready(function () {
+      $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+
+        var $form   = $(this);
+        var $btn    = $('#submitBtn');
+        var $alert  = $('#formAlert');
+
+        // Basic client-side validation
+        var name    = $.trim($('#fullname').val());
+        var email   = $.trim($('#email').val());
+        var phone   = $.trim($('#phone').val());
+        var message = $.trim($('#msg').val());
+
+        if (!name || !email || !phone || !message) {
+          $alert.css({ 'background': '#fff3cd', 'color': '#856404', 'border': '1px solid #ffc107' })
+                .text('Please fill in all required fields.')
+                .show();
+          return;
+        }
+
+        // Disable button and show loading state
+        $btn.text('Sending...').prop('disabled', true);
+        $alert.hide();
+
+        $.ajax({
+          url: 'send-mail.php',
+          type: 'POST',
+          data: $form.serialize(),
+          dataType: 'json',
+          success: function (res) {
+            if (res.success) {
+              $alert.css({ 'background': '#d1e7dd', 'color': '#0f5132', 'border': '1px solid #badbcc' })
+                    .text(res.message)
+                    .show();
+              $form[0].reset();
+              $btn.text('send message').prop('disabled', false);
+            } else {
+              $alert.css({ 'background': '#f8d7da', 'color': '#842029', 'border': '1px solid #f5c2c7' })
+                    .text(res.message)
+                    .show();
+              $btn.text('send message').prop('disabled', false);
+            }
+          },
+          error: function () {
+            $alert.css({ 'background': '#f8d7da', 'color': '#842029', 'border': '1px solid #f5c2c7' })
+                  .text('Something went wrong. Please try again or call +91 92114 01779.')
+                  .show();
+            $btn.text('send message').prop('disabled', false);
+          }
+        });
+      });
+    });
+    </script>
   </body>
 </html>

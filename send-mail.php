@@ -1,46 +1,64 @@
 <?php
 /**
  * Ultraphysiocare Contact Form Mail Handler
- * Receives POST data from the appointment form and sends an email to
- * ultraphysiocare@gmail.com
+ * Receives POST data from the contact form and sends an email
+ * to ultraphysiocare@gmail.com
+ *
+ * Works with Hostinger shared hosting (php mail() is supported out of the box).
+ * The From address uses the site domain so Hostinger's MTA accepts it.
+ * The Reply-To is set to the visitor's email so you can reply directly.
  */
 
-header('Content-Type: text/plain; charset=UTF-8');
+header('Content-Type: application/json; charset=UTF-8');
 
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo 'Method not allowed.';
+    echo json_encode(['success' => false, 'message' => 'Method not allowed.']);
     exit;
 }
 
 // -----------------------------------------------------------------------
-// Helper: sanitize a plain text value
+// Helper: sanitise a plain text value
 // -----------------------------------------------------------------------
-function clean(string $value): string {
+function clean(string $value): string
+{
     return htmlspecialchars(strip_tags(trim($value)), ENT_QUOTES, 'UTF-8');
 }
 
 // -----------------------------------------------------------------------
-// Collect & sanitise fields
+// Collect & sanitise all form fields
 // -----------------------------------------------------------------------
 $name    = clean($_POST['name']    ?? '');
+$email   = filter_var(trim($_POST['email']   ?? ''), FILTER_SANITIZE_EMAIL);
 $phone   = clean($_POST['phone']   ?? '');
-$service = clean($_POST['service'] ?? '');
-$message = clean($_POST['message'] ?? '');
+$subject = clean($_POST['subject'] ?? '');
+$message = clean($_POST['msg']     ?? '');
 
 // -----------------------------------------------------------------------
 // Validate required fields
 // -----------------------------------------------------------------------
-if (empty($name) || empty($phone) || empty($service)) {
-    http_response_code(400);
-    echo 'Please fill in all required fields.';
-    exit;
+$errors = [];
+
+if (empty($name)) {
+    $errors[] = 'Name is required.';
 }
 
-if (!preg_match('/^[0-9]{10}$/', $phone)) {
+if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = 'A valid email address is required.';
+}
+
+if (empty($phone)) {
+    $errors[] = 'Phone number is required.';
+}
+
+if (empty($message)) {
+    $errors[] = 'Message is required.';
+}
+
+if (!empty($errors)) {
     http_response_code(400);
-    echo 'Please enter a valid 10-digit mobile number.';
+    echo json_encode(['success' => false, 'message' => implode(' ', $errors)]);
     exit;
 }
 
@@ -48,37 +66,48 @@ if (!preg_match('/^[0-9]{10}$/', $phone)) {
 // Build email body
 // -----------------------------------------------------------------------
 $lines   = [];
-$lines[] = "New appointment request from Ultraphysiocare website";
-$lines[] = str_repeat('-', 50);
-$lines[] = "Name:    {$name}";
-$lines[] = "Phone:   {$phone}";
-$lines[] = "Service: {$service}";
-if (!empty($message)) {
-    $lines[] = str_repeat('-', 50);
-    $lines[] = "Message:\n{$message}";
-}
+$lines[] = "New appointment/enquiry from the Ultraphysiocare website";
+$lines[] = str_repeat('-', 55);
+$lines[] = "Name:          {$name}";
+$lines[] = "Email:         {$email}";
+$lines[] = "Phone:         {$phone}";
+$lines[] = "Subject:       {$subject}";
+$lines[] = str_repeat('-', 55);
+$lines[] = "Message:";
+$lines[] = $message;
+$lines[] = str_repeat('-', 55);
+$lines[] = "Sent from:     ultraphysiocare.com/contact.html";
 
 $body = implode("\n", $lines);
 
 // -----------------------------------------------------------------------
-// Send email via PHP mail()
+// Mail configuration
 // -----------------------------------------------------------------------
-$to      = 'ultraphysiocare@gmail.com';
-$subject = "Appointment Request: {$name} – {$service}";
+$to           = 'ultraphysiocare@gmail.com';
+$mail_subject = "New Enquiry: {$subject} — from {$name}";
 
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-$host = preg_replace('/[^a-z0-9.-]+/i', '', $host);
-$from_address = 'noreply@' . ($host ?: 'localhost');
+// Use your domain address in From so Hostinger's MTA accepts it.
+$from_name    = 'Ultraphysiocare Website';
+$from_address = 'noreply@ultraphysiocare.com';
 
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$headers .= "From: Ultraphysiocare <{$from_address}>\r\n";
-$headers .= "Reply-To: Ultraphysiocare <{$from_address}>\r\n";
+$headers .= "From: {$from_name} <{$from_address}>\r\n";
+$headers .= "Reply-To: {$name} <{$email}>\r\n";
 $headers .= "X-Mailer: PHP/" . PHP_VERSION;
 
-if (mail($to, $subject, $body, $headers)) {
-    echo 'success';
+// -----------------------------------------------------------------------
+// Send email via PHP mail()
+// -----------------------------------------------------------------------
+if (mail($to, $mail_subject, $body, $headers)) {
+    echo json_encode([
+        'success' => true,
+        'message' => 'Thank you! Your message has been sent. We will get back to you shortly.'
+    ]);
 } else {
     http_response_code(500);
-    echo 'Sorry, there was a problem sending your message. Please try again.';
+    echo json_encode([
+        'success' => false,
+        'message' => 'Sorry, there was a problem sending your message. Please try again or contact us directly at +91 92114 01779.'
+    ]);
 }
